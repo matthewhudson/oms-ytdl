@@ -11,5 +11,6 @@ before_install:
 script:
   - npx oms build
   - |
-    output="$(npx oms run --silent message -a name="World" | jq -c .)"
-    if [ "$output" != '{"message":"Hello World"}' ] ; then echo "$output"; exit 1; fi
+    output="$(npx oms run --silent info \
+      -a url=https://www.youtube.com/watch?v=02dbxYYcE1c | jq -c .)"
+    if [ "$output" != '{"id":"02dbxYYcE1c","title":"NBC \"Community\" - Spanish Rap - HQ","url":"https://r6---sn-hp57knly.googlevideo.com/videoplayback?expire=1573097664&ei=XzzDXf3AM8itj-8P5qWboA4&ip=73.104.45.37&id=o-AESlEC5L9P1-0sOL-Ho7E0PJgkEjsonJKv8tAlfSYRfc&itag=18&source=youtube&requiressl=yes&mm=31%2C29&mn=sn-hp57knly%2Csn-hp57ynee&ms=au%2Crdu&mv=m&mvi=5&pl=15&initcwndbps=2072500&mime=video%2Fmp4&gir=yes&clen=2095057&ratebypass=yes&dur=39.172&lmt=1475741005217595&mt=1573075970&fvip=3&fexp=23842630&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=ALgxI2wwRAIgbsvJAPxxtNdUaLmBNqw5I2DPr166NsFOfEEHiB1rSh8CID4pqk4ofK5LYbVVpHs-_HG317PLiK5p9wLM_xG8NTn5&lsparams=mm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHylml4wRAIgVmRBwPnhMxyPANZ4JeRSfKPDC-lyl8QSxPYW2dh6naQCICEutDdXWsVNQaf9MOnG56pe4Av_7AtlD8YaVd1xx9i9","thumbnail":"https://i.ytimg.com/vi/02dbxYYcE1c/hqdefault.jpg","description":"A funny scene from a new Tv Show \"Community\"","format":"18 - 624x352 (360p)"}' ] ; then echo "$output"; exit 1; fi

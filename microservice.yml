@@ -2,8 +2,8 @@ omg: 1
 
 info:
   version: 1.0.0
-  title: Your microservice
-  description: Describe your microservice
+  title: ytdl
+  description: Wrapper for Node package ytdl-core
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
@@ -18,19 +18,16 @@ health:
     port: 8080
 
 actions:
-  message:
+  info:
     http:
-      path: /message
-      method: post
+      path: /info
+      method: get
       port: 8080
     arguments:
-      name:
+      url:
         type: string
         required: true
-        in: requestBody
+        in: query
     output:
       contentType: application/json
-      type: object
-      properties:
-        message:
-          type: string
+      type: map

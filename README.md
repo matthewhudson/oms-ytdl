@@ -38,12 +38,5 @@ yarn run commit
 ## OMS Test Runner
 
 ```sh
-> omg run message -a name=Service
-ℹ Building Docker image
-…
-✔ Built Docker image with name: omg/l2hvbwuvc2vil2fzew5jes9ydwj5
-✔ Started Docker container: 1c8a91688261
-✔ Health check passed
-✔ Ran action: `message` with output: {"message":"Hello Service"}
-✔ Stopped Docker container: 1c8a91688261
+oms run info -a url=https://www.youtube.com/watch?v=02dbxYYcE1c
 ```

@@ -1,8 +1,8 @@
 {
-  "name": "oms-nodejs",
+  "name": "oms-ytdl",
   "private": true,
   "version": "0.0.1",
-  "description": "An Open Microservice template for Node.js",
+  "description": "An Open Microservice wrapper for YTDL",
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
@@ -13,13 +13,17 @@
   "author": "Matthew Hudson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matthewhudson/oms-nodejs/issues"
+    "url": "https://github.com/matthewhudson/oms-ytdl/issues"
   },
-  "homepage": "https://github.com/matthewhudson/oms-nodejs#readme",
-  "keywords": ["microservice", "oms"],
+  "homepage": "https://github.com/matthewhudson/oms-ytdl#readme",
+  "keywords": [
+    "microservice",
+    "oms"
+  ],
   "dependencies": {
     "body-parser": "1.19.0",
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "youtube-dl": "2.1.0"
   },
   "devDependencies": {
     "cz-conventional-changelog": "3.0.2",
