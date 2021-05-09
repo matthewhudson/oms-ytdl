@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:16-alpine
 RUN apk add -q --progress --update --no-cache ca-certificates wget ffmpeg python gnupg curl && \
     LATEST=$(wget -qO- https://api.github.com/repos/rg3/youtube-dl/releases/latest | grep '"tag_name": ' | sed -E 's/.*"([^"]+)".*/\1/') && \
     LATEST=${YOUTUBE_DL_OVERWRITE:-$LATEST} && \
